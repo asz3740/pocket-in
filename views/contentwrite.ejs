@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <%include template/head%>
+</head>
+<body>
+    <%include template/nav%>
+    <div class="container">
+        <table class="table table-bordered">
+            <colgroup>
+                <col width="50">
+            </colgroup>
+            <thead>
+                <tr>
+                    <td colspan="2">글쓰기</td>
+                </tr>
+            </thead>
+            <tbody>
+                <form id="writeAction" action="/process/contentwrite" method="post">
+                <tr>
+                    <th scope="col" style="width:10%;">제목</th>
+                    <td class=""><input type="text" class="inputSubject" id="title" name="title" placeholder="제목" style="width:650px;"></td>
+                </tr>
+                <tr>
+                    <th style="width:10%;">내용</th>
+                    <td>
+                        <textarea class="textContents" id="contents" name="contents" required="" style="width: 650px; height: 250px; background-position: right top; margin: 0px;" placeholder="글 내용"></textarea>
+                    </td>
+                </tr>
+                </form>
+            </tbody>
+        </table>
+        <div class="forbtn">
+            <button class="btn btn-primary"><a onclick="submitContents('add');">SUBMIT</a></button>
+            <button class="btn btn-warning"><a class="wbtn" id="cancel">CANCEL</a></button>
+        </div>
+    </div>
+    
+    <script src="/js/cancel.js"></script>
+</body>
+</html>

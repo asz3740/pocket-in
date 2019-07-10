@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <%include template/head%>
+</head>
+<body>
+    <%include template/nav%>
+    <%function dateFormatChange(date){
+        var option={
+            weekday:'short',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'
+        };
+        return date.toLocaleTimeString('ko-KR',option);
+    }%>
+     <%if(typeof contents!=='undefined'){%>
+    <div class="container">
+       <table class="table table-sm table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Writer</th>
+              <th scope="col">Date</th>
+              <th scope="col">Count</th>
+            </tr>
+          </thead>
+          <tbody>
+             <% contents.forEach(function(elem,i){%>
+              <tr>                  
+                  <td><a href="/process/contentread?id=<%=elem._id%>"><%=elem.title%></a></td>
+                  <td><%=elem.writer%></td>
+                  <td><%=dateFormatChange(elem.date)%></td>
+                  <td><%=elem.count%></td>
+              </tr>
+              <%})
+              }%>
+          </tbody>
+        </table>
+        
+        <%if(typeof searched!=='undefined'){
+            for(var i=1;i<=pages;i++){%>
+                <a href="/process/contentsearch?page=<%=i%>"><%=i%></a>
+            <%}
+        }else{
+            for(var i=1;i<=pages;i++){%>
+                <a href="/process/boardfind?page=<%=i%>"><%=i%></a>
+            <%}
+        }%>
+        <form method="get" action="/process/search">
+            <div class="btnleft">
+                <button type="button" class="btn btn-primary" id="writing"><a href="/process/contentwriteform" class="wbtn">글쓰기</a></button>
+            </div>
+            <div class="btnright">
+                <%if(typeof searched!=='undefined'){%>
+                <input type="input" value="<%=searched%>" id="search" name="search">
+                <%}else{%>
+                <input type="input" value="" id="search" name="search">
+                <%}%>
+                <button class="btn btn-dark" id="searchbtn" type="submit">검색</button>
+            </div>
+        </form>
+    </div>
+        
+  </body>
+</html>

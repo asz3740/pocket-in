@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/banner.js"></script>
+  </head>
+  
+  <body style="font-family:'하얀분필';">
+  <div style="background-color:transparent;left:0px;width:1922px;height: 110px; position:fixed; z-index:9;">
+  <img src="/img/gsm.png" alt="" style="position: absolute;top:-20px;left:750px;">
+  </div>
+        <div style="padding-bottom:110px;"></div>
+      </div>
+    <% if(name == "NULL") { %>
+      <button type="button" name="" value="Login" class="login"><a href="/users/login"><span style="color:black">Login</span></a></button>
+    <% } else {%>
+      <!-- <span style="position:absolute; top:40px; right:400px;">님 안녕하세요</span> -->
+      <span style="position:absolute; top:40px; right:300px;font-size: 30px;"><%= name %>님</span>
+      <button type="button" name="" value="Login" class="login"><a href="/users/logout"><span style="color:black">Logout</span></a></button>
+    <% } %>
+
+  <div class="box0">
+    <div class="box2">
+      <div class="box3">
+        <span style ="font-size:80px; color:#ffffff; font-family:'나눔고딕'">Top<br>Pocket<br>Partner</span>
+        <br><br>
+        <span style ="font-size:20px;line-height: -200px; color:#ffffff;">별점이 높은 사람들을 별점순으로 정렬하여 이번 달 TOP 3를 모았습니다. 남은기간과 나의 별점 등급 확인은 더 알아보기</span><br>
+          <button type="button" name="button" class="add"><a href="/rank">더 알아보기</a></button>
+      <div class="box4" style="color: white;">
+        <span>Top 3 Master</span><br>
+        <div class="box5">
+          <img src="./img/pb.png" alt="" style="width:50px;">
+           <U><%= name %></U>
+        </div>
+        <div class="box5">
+          <img src="./img/pb.png" alt="" style="width:50px;">
+          <%= name %>
+        </div>
+        <div class="box5">
+          <img src="./img/pb.png" alt="" style="width:50px;">
+          <%= name %>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box1">
+    <div class="box2">
+      <div class="box3">
+        <span style ="font-size:80px; color:#bb3eee; font-family:'나눔고딕'">Pocket<br>Board</span>
+        <br><br>
+        <span style ="font-size:20px; color:#bb3eee;">추천 게시판을 DB를 연동하여 시간이 지날 수록 별이 달리게 되고 Top 3를 골라 오른쪽에 표현하였습니다.</span><br>
+          <button type="button" name="button" class="add"><a href="/process/boardfind" style="color:#aaaaaa">더 알아보기</a></button>
+      <div class="box4" style="background:transparent; color:black">
+        <span>추천 게시판</span><br>
+        <div class="box5">
+          <img src="./img/pb.png" alt="" style="width:50px;">
+           <U><%= name %></U>
+        </div>
+        <div class="box5">
+          <img src="./img/pb.png" alt="" style="width:50px;">
+          <%= name %>
+        </div>
+        <div class="box5">
+          <img src="./img/pb.png" alt="" style="width:50px;">
+          <%= name %>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+    
+  <div class="mib">
+    GSM 광주광역시 광산구 송정동 상무대로 312 <span style="padding-left:500px; color:black;"> 전화번호 : 010-진짜-건도꺼</span>
+    <br> 이메일 : s18010@gsm.hs.kr <span style="padding-left:650px; color:black;">이메일 : 건도@이메일.com </span>
+
+
+  </div>
+
+</body>
+</html>

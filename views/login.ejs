@@ -1,0 +1,20 @@
+ <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="/css/main.css">
+    <title>로그인</title>
+  </head>
+  <body class="body">
+    <% include ./partials/messages %>
+    <div class="sh">
+      <a href="/welcome">
+    <img src="/img/gsm.png" alt="" class="logo" style="top:50px; left:80px; width:300px; height:130px;"></a>
+    <form action="/users/login" method="POST">
+      <input type="email" id = "email" name="email" value="" class="search" style ="top:250px; left:75px; width:350px;" placeholder="아이디를 입력해주세요">
+      <input type="password" id="password" name="password" value="" class="search" style ="top:340px; left:75px; width:350px;" placeholder="비밀번호를 입력해주세요">
+      <button type="submit" class="Login">Login</button>
+    </form>
+      <a href="/users/register" style="position:absolute;top:550px;left:50px; font-size:20px;"><span style="color:black;">아이디가 없으신가요?</span> 회원가입</a>
+    </div>
+
+
+  </body>

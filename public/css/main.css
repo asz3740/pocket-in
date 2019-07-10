@@ -1,0 +1,243 @@
+@font-face {
+  font-family: '하얀분필';
+  src: url("210+하얀분필R.ttf");
+}
+@font-face {
+  font-family:'나눔고딕';
+  src:url("NanumGothic-Regular");
+}
+.body{
+  font-family:'하얀분필';
+  background-image:url('/img/back.jpg');
+  background-size: cover; 
+}
+.logo{
+  position: absolute;
+  width:200px;
+  left: 50px;
+  height: 90px;
+}
+.search{
+  position: absolute;
+  width:280px;
+  top:40px;
+  left:300px;
+  height: 44px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0 0 rgba(1, 0, 0, 0.16);
+  border: solid 1px #58FAF4;
+  background-color: #ffffff;
+  text-align: center;
+  font-size:15px;
+}
+.hangi{
+  background-image:url('/img/background.png');
+  background-size: cover;
+}
+.box0{
+  background-image:url('/img/back6.png');
+  width: 100%;
+  height: 900px;
+  background-size: cover;
+}
+.box1{
+  background-image:url('/img/back.jpeg');
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  border: solid 0 1px 0 0 blue;
+}
+.box2{
+  border-radius: 5px;
+  width:1400px;
+  height:650px;
+  position: relative;
+  top:100px;
+  left:200px;
+  border: solid 0 1px 0 0 blue;
+}
+.box3{
+  background-color: transparent;
+  width:500px;
+  height:550px;
+  position: relative;
+  font-size: 30px;
+}
+.box4{
+  background-color: transparent;
+  width:800px;
+  height:400px;
+  position: relative;
+  font-size: 30px;
+  left: 650px;
+  top:-380px;
+  padding: 30px;
+  box-shadow: 5px 5px 5px 0 rgba(0.1, 0, 0, 0.16);
+  border-radius:5px;
+}
+.box5{
+  background-color: transparent;
+  width:700px;
+  height:20px;
+  position: relative;
+  border: solid 0 1px 0 0 blue;
+  font-size: 30px;
+  padding: 30px;
+}
+.box6{
+  background-color:white;
+  position: relative;
+  width:1200px;
+  height:2200px;
+  top:550px;
+  left:350px;
+  border: solid 0 1px 0 0 blue;
+  font-size: 30px;
+}
+.box7{
+  background-color:#F2F2F2;
+  position: relative;
+  width:399px;
+  height:500px;
+  top:-16px;
+  left:0px;
+  border: solid 0 3px 0 0 blue;
+  font-size: 30px;
+  padding: 20px;
+}
+.box8{
+  background-color:white;
+  position: absolute;
+  width:250px;
+  height:250px;
+  border-radius: 1000px;
+  top:30px;
+  left: 70px;
+  border: solid 0 3px 0 0 blue;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.box9{
+  background-color:transparent;
+  position: absolute;
+  width:250px;
+  height:250px;
+  top:30px;
+  left:470px;
+  border: solid 0 3px 0 0 blue;
+  font-size: 30px;
+  margin-bottom: 10px;
+  z-index: 100;
+  text-align: center;
+}
+.boardbox{
+  background-color: transparent;
+  width:1800px;
+  height:620px;
+  position: relative;
+  border: solid 3px #C9CE9E;
+  border-radius: 10px;
+  font-size: 30px;
+  top:-80px;
+  left:20px;
+  z-index: -999;
+  padding:30px;
+  box-shadow: 5px 5px 5px 0 #EDF1CB;
+}
+.vertical{
+  position: relative;
+  width:1px;
+  height: 400px;
+  border: solid 0.1px;
+}
+.vertical1{
+  position: absolute;
+  width:1px;
+  height:400px;
+  border: solid 0.1px;
+}
+.mib{
+  background-image:url('/img/back4.jpg');
+  background-size: cover;
+  background-color: #6E6E6E;
+  position: relative;
+  width: 100%;
+  height: 150px;
+  padding: 30px;
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
+}
+.login{
+  font-family:'하얀분필';
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 0 rgba(0.1, 0, 0, 0.16);
+  border: solid 1px;
+  font-size:20px;
+  border: solid 1px;
+  background-color: transparent;
+  position: absolute;
+  width: 120px;
+  height:40px;
+  top:47px;
+  right:130px;
+  z-index: 10;
+}
+.Login{
+  font-family:'하얀분필';
+  border-radius: 12px;
+  box-shadow: 0px 0px 3px 0 rgba(0.1, 0, 0, 0.16);
+  border: solid 1px skyblue;
+  font-size:30px;
+  background-color: #58D3F7;
+  position: absolute;
+  width: 200px;
+  height:60px;
+  top:450px;
+  left:150px;
+}
+.signUp{
+  font-family:'하얀분필';
+  border-radius: 12px;
+  box-shadow: 0px 0px 3px 0 rgba(0.1, 0, 0, 0.16);
+  border: solid 1px skyblue;
+  font-size:30px;
+  background-color: #58D3F7;
+  position: absolute;
+  width: 200px;
+  height:60px;
+  top:560px;
+  left:150px;
+}
+div.sh{
+  position: absolute;
+  width:500px;
+  top:150px;
+  left:300px;
+  height: 650px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px rgba(0.1, 0, 0, 0.16);
+  border: solid 1px transparent;
+  background-color: transparent;
+  text-align: center;
+  font-size:15px;
+}
+.add{
+  font-family:'하얀분필';
+  border-radius: 35px;
+  box-shadow: 0px 0px 3px 0 rgba(0.1, 0, 0, 0.16);
+  border: solid 1px #f99e4c;
+  font-size: 20px;
+  width: 180px;
+  height: 50px;
+  position: relative;
+  top:120px;
+  left:120px;
+  background: #f03e5f;
+  background: linear-gradient(to right, #f99e4c, #feb47c);
+}
+a{
+ text-decoration: none;
+ color:black;
+}

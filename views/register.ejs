@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="/css/main.css">
+    <title>로그인</title>
+  </head>
+  <body class="body">
+<div class="sh">
+            </h1>
+            <% include ./partials/messages %>
+            <form action="/users/register" method="POST">
+              <img src="/img/gsm.png" alt="" class="logo" style="top:50px; left:80px; width:300px; height:130px;">                <input
+                  type="name"
+                  id="name"
+                  name="name"
+                  class="search"
+                  placeholder="Enter Name"
+                  value="<%= typeof name != 'undefined' ? name : '' %>"
+                  style ="top:230px; left:75px; width:350px;"
+                />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="search"
+                  placeholder="Enter Email"
+                  value="<%= typeof email != 'undefined' ? email : '' %>"
+                  style ="top:310px; left:75px; width:350px;"
+                />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="search"
+                  placeholder="Create Password"
+                  value="<%= typeof password != 'undefined' ? password : '' %>"
+                  style ="top:390px; left:75px; width:350px;"
+                />
+                <input
+                  type="password"
+                  id="password2"
+                  name="password2"
+                  class="search"
+                  placeholder="Confirm Password"
+                  value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+                  style ="top:470px; left:75px; width:350px;"
+                />
+              <button type="submit" class="signUp">
+                Sign UP
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>

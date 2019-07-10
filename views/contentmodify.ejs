@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <%include template/head%>
+</head>
+<body>
+    <%include template/nav%>
+    <%function dateFormatChange(date){
+        var option={
+            weekday:'short',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'
+        };
+        return date.toLocaleTimeString('ko-KR',option);
+    }%>
+     <div class="container">
+         <form action="/process/contentmodified" method="get">
+             <table class="table table-bordered">
+                <colgroup>
+                    <col width="50">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td colspan="2">글쓰기</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="col" style="width:10%;">제목</th>
+                        <td class=""><input type="text" class="inputSubject" id="title" name="title" placeholder="제목" style="width:650px;" value="<%=contents.title%>"></td>
+                    </tr>
+                    <tr>
+                        <th style="width:10%;">내용</th>
+                        <td>
+                            <textarea class="textContents" id="contents" name="contents" required="" style="width: 650px; height: 250px; background-position: right top; margin: 0px;" placeholder="글 내용"><%=contents.contents%></textarea>
+                        </td>
+                    </tr>
+                </tbody>  
+            </table>
+            <div class="forbtn">
+                <button class="btn btn-primary" type="submit">COMPLETE</button>
+                <input name="id" value="<%=contents._id%>" type="hidden">
+                <button class="btn btn-danger"><a class="wbtn" id="warning">CANCEL</a></button>
+            </div>  
+         </form>
+    </div>
+</body>
+</html>

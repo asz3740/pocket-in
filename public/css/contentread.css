@@ -1,0 +1,23 @@
+.container{
+    margin:40px auto;
+}
+.comment_box{
+    width:100%;
+    border:2px solid #223A5E;
+    background-color:#4F84C4;
+    color:white;
+    margin:5px;
+}
+li.comment_info{
+    background-color:#0074D9;
+    margin-left:-40px;
+    padding:5px;
+}
+.comment_area{
+    background-color:none;
+    margin-left:-40px;
+    padding:5px;
+}
+ul li{
+    list-style-type:none;
+}
