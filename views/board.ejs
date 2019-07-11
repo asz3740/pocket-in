@@ -5,26 +5,73 @@
     <title></title>
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/banner.js"></script>
+    <%include template/head%>
   </head>
-  
-<body style="font-family:'하얀분필';  background-image:url('/img/board.jpg'); background-size: cover;" class="body">
+  <body style="height: 0px; background-image:url('/img/board.jpg'); background-size: cover;">
   <a href="/welcome">
   <img src="/img/gsm.png" alt="" style="position: absolute; left:0px;"></a>
   </div>
-  <div class="box2" style="left:30px;">
-    <img src="/img/bik.png" alt="" style="position:relative; left: -80px; z-index:99;">
+  <div class="box2" style="left:30px; z-index: -30;">
+    <img src="/img/bik.png" alt="" style="position:relative; left: 650px; z-index:99;">
     <div class="boardbox" style="text-align: center;">
         <span style="position: relative; top:-80px;left:70px;">비크티니 게시판</span>
-           NO  <span style="padding: 0 360px 0 40px;"> |</span>
-           제목  <span style="padding: 0 40px 0 360px;"> |</span>
-           작성자<span style="padding: 0 40px 0 40px;"> |</span>
-           작성일  <span style="padding: 0 40px 0 40px;"> |</span>
-           조회수  <span style="padding: 0 40px 0 40px;"> |</span> 음<hr>
-           <div style="line-height: 450px;">게시물이 존재하지 않습니다.</div>
-      
-      <a href="/process/contentwriteform">글쓰기</a>
-      
+        
+        <%function dateFormatChange(date){
+            var option={
+                weekday:'short',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'
+            };
+            return date.toLocaleTimeString('ko-KR',option);
+        }%>
+         <%if(typeof contents!=='undefined'){%>
+        <div class="container">
+           <table class="table table-sm table-hover" style="position: absolute; top:10px; left:10px;">
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                 <% contents.forEach(function(elem,i){%>
+                  <tr>                  
+                      <td><%= i +1%></td>
+                      <td><a href="/process/contentread?id=<%=elem._id%>"><%=elem.title%></a></td>
+                      <td><%=dateFormatChange(elem.date)%></td>
+                      <td><%=elem.count%></td>
+                  </tr>
+                  <%})
+                  }%>
+              </tbody>
+            </table>
+            <div style="position:relative;top:560px;">
+            <%if(typeof searched!=='undefined'){
+                for(var i=1;i<=pages;i++){%>
+                    <a href="/process/contentsearch?page=<%=i%>"><%=i%></a>
+                <%}
+            }else{
+                for(var i=1;i<=pages;i++){%>
+                    <a href="/process/boardfind?page=<%=i%>"><%=i%></a>
+                <%}
+            }%>
+          </div>
+            <form method="get" action="/process/search">
+                <div class="btnleft" style="position:relative;top:500px;left:1200px;">
+                    <a href="/process/contentwriteform">글쓰기</a>
+                </div>
+                <div style="position:relative;top:-380px;left:700px;">
+                    <%if(typeof searched!=='undefined'){%>
+                    <input type="input" value="<%=searched%>" id="search" name="search">
+                    <%}else{%>
+                    <input type="input" value="" id="search" name="search">
+                    <%}%>
+                    <button class="btn btn-dark" id="searchbtn" type="submit">검색</button>
+                </div>
+            </form>      
     </div>
   </div>
+</div>
 
+</body>
 </html>

@@ -33,7 +33,7 @@
                     location.reload();
                     for(var i=0;i<reply.length;i++) {//현재 댓글 페이지의 전체 출력
                             output +=
-                                '<div class="comment_box" id="'+reply[i]._id+'">'
+                                '<div class="comment_box" id="'+reply[i]._id+'" style ="background:snow;">'
                                 +   '<ul class="comment">'
                                 +       '<li class="comment_info">'
                                 +         '<span>'+reply[i].name+'</span>'
@@ -110,28 +110,28 @@
         }
         
 </script>
-<body>
+<body style="background-image:url('/img/back7.jpeg'); background-size: cover;">
     <%function dateFormatChange(date){
         var option={
             weekday:'short',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'
         };
         return date.toLocaleTimeString('ko-KR',option);
     }%>
-    <%include template/nav%>
-     <div class="container">
+    
+     <div class="container" style="background:snow;padding:10px; position:absolute;top:100px;">
          <table class="table">
             <thead>
-                <tr class="table-active">
+                <tr >
                     <th>제목</th><td colspan="5"><%=contents.title%></td>
                 </tr>
             </thead>
              <tbody>
-                 <tr class="table-primary">
+                 <tr>
                      <th>글쓴이</th><td><%=contents.writer%></td>
                      <th>날짜</th><td><%=dateFormatChange(contents.date)%></td>
                      <th>조회수</th><td><%=contents.count%></td>
                  </tr>
-                 <tr class="table-info">
+                 <tr>
                      <td colspan="6"><pre><%=contents.contents%></pre></td>
                  </tr>
              </tbody>
@@ -143,7 +143,6 @@
             <button class="btn btn-danger"><a href="/process/contentdelete?id=<%=contents._id%>" class="wbtn">DELELTE</a></button>
          </div>
     </div>
-    
     <div class="container">
         <div class="reply_list">
         <%
@@ -183,7 +182,7 @@
                         <textarea class="form-control" id="m<%=contents.comments[j]._id%>" wrap="hard"><%=text%></textarea>
                       </div>
                   </div>
-                  <div class="modal-footer">
+                  <div class="modal-footer" >
                     <button type="button" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary"><a href="#reply_list" onclick="replymodified('<%=contents._id%>','<%=contents.comments[j]._id%>');" class="wbtn">ADJUST</a></button>
                   </div>
@@ -203,12 +202,8 @@
             <%}%>
         </div>
     <%}%>
-    <div class="container">
-        <form action="/process/reply" method="post">
-            <textarea style="width:100%;" rows="4" placeholder="댓글 남기기" name="reply" wrap="hard"></textarea>
-            <input type="submit" value="작성" class="btn btn-primary"><input value="<%=contents._id%>" type="hidden" name="contentid">
-        </form>
-    </div>
+    
+    <a href="/process/boardfind" style="border:0 black; border-radius: 5px; width: 100px; background: #b1ceec; padding: 10px 50px 10px 50px; position: relative; top:720px; left:950px;">Cancel</a>
     <script src="/js/cancel.js" ></script><!--ejs의 요소들이 다 load된 뒤에 참조해야 인식함.-->
 </body>
 </html>

@@ -89,11 +89,12 @@
   background-color:white;
   position: relative;
   width:1200px;
-  height:2200px;
+  height:500px;
   top:550px;
   left:350px;
   border: solid 0 1px 0 0 blue;
   font-size: 30px;
+  padding-bottom: 10px;
 }
 .box7{
   background-color:#F2F2F2;

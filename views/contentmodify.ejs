@@ -3,15 +3,14 @@
 <head>
     <%include template/head%>
 </head>
-<body>
-    <%include template/nav%>
+<body style=" background-image:url('/img/board.jpg'); background-size: cover;">
     <%function dateFormatChange(date){
         var option={
             weekday:'short',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'
         };
         return date.toLocaleTimeString('ko-KR',option);
     }%>
-     <div class="container">
+     <div class="container" style="position: relative; top:50px; width: 1200px; height: 800px;">
          <form action="/process/contentmodified" method="get">
              <table class="table table-bordered">
                 <colgroup>

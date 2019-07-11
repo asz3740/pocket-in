@@ -3,10 +3,9 @@
 <head>
     <%include template/head%>
 </head>
-<body>
-    <%include template/nav%>
-    <div class="container">
-        <table class="table table-bordered">
+<body style="height: 0px; background-image:url('/img/board.jpg'); background-size: cover;">
+    <div class="container" style="position: relative; top:50px; width: 1200px; height: 800px;">
+        <table class="table table-bordered" style="width: 1200px; height: 800px; border: 0 transparent;">
             <colgroup>
                 <col width="50">
             </colgroup>
@@ -17,14 +16,14 @@
             </thead>
             <tbody>
                 <form id="writeAction" action="/process/contentwrite" method="post">
-                <tr>
-                    <th scope="col" style="width:10%;">제목</th>
-                    <td class=""><input type="text" class="inputSubject" id="title" name="title" placeholder="제목" style="width:650px;"></td>
+                <tr style="height:10px;">
+                    <th scope="col" style="width:3%;">제목</th>
+                    <td class=""><input type="text" class="inputSubject" id="title" name="title" placeholder="제목" style="width:550px;"></td>
                 </tr>
-                <tr>
+                <tr style="height:200px;">
                     <th style="width:10%;">내용</th>
                     <td>
-                        <textarea class="textContents" id="contents" name="contents" required="" style="width: 650px; height: 250px; background-position: right top; margin: 0px;" placeholder="글 내용"></textarea>
+                        <textarea class="textContents" id="contents" name="contents" required="" style="width: 1050px; height: 450px; background-position: right top; margin: 0px;" placeholder="글 내용"></textarea>
                     </td>
                 </tr>
                 </form>
